@@ -1,0 +1,40 @@
+<div class=" header font-[Inter,sans-serif] font-bold flex flex-col xl:pr-5 pt-5 mb-0 ">
+    <div class="frame1 flex flex-col xl:flex-row  items-center justify-around mb-7">
+         <div class="img mr-3 "><a href="/" class="cursor-pointer flex"><img src="/img/logo-icon.svg" alt=""><img src="/img/FoodFarm-logo.svg" alt="" class=""></a></div>
+        <form action="/all/search" method="GET" class="flex items-center justify-between ">
+            <div
+              class=" searchBar bg-[#F5F5F5] border border-y-[#D8D8D8] border-l-[#D8D8D8] border-r-[#D8D8D8] xl:border-r-0 py-2 px-5 rounded-lg xl:rounded-l-lg flex gap-3 ">
+                <select id="categories" name="categories" class="hidden xl:block">
+                    <option value="ALL CATEGORIES">ALL CATEGORIES</option>
+                    <option value="banana">fruits</option>
+                    <option value="mango">pets</option>
+                </select>
+                <input type="text" name="query" placeholder="Search for products..." class="search-input w-[100%]">
+            </div>
+            <div class="bg-[#6BB252] py-2 px-6 rounded-r-lg border border-b-2 border-y-1 border-[#6BB252] text-white hidden xl:block">
+                <button type="submit" class="search-button">Search</button>
+            </div>
+        </form>
+         </form>
+        <div id="more_button" class=" z-99 absolute top-7 right-4 sm:hidden"><img src="/img/more.svg" alt="" class="invert w-8 h-8"></div>
+        <div id="options" class="hidden flex flex-col xl:flex-row  items-center gap-4 xl:gap-10 absolute top-15 right-3 z-99 p-2 bg-gray-300 xl:bg-white xl:static xl:flex rounded-xl opacity-0.6">           
+            <form action="/auth/dashboard" method="get" >
+                <button class="cursor-pointer xl:p-2 rounded-full hover:bg-gray-400">
+                    <img src="/img/profile.svg" alt="">
+                </button>
+            </form>
+            <form action="" method="get">
+                <button class="cursor-pointer xl:p-2 rounded-full hover:bg-gray-400">
+                    <img src="/img/bookmark.svg" alt="">
+                </button>
+            </form>
+            <form action="/cart" method="get">
+                <button class="cursor-pointer xl:-2 rounded-full hover:bg-gray-400">
+                    <img src="/img/cart.svg" alt="">
+                </button>
+            </form>
+        </div>
+
+    </div>
+   
+</div>

@@ -1,0 +1,73 @@
+ <ul class=" flex xl:gap-2 flex-wrap pl-6 xl:pl-0 ">
+      <% items.forEach(item=> { %>
+        <li class="mx-7 mt-7 w-[31%] xl:w-[19%]">
+          <div style="margin-bottom: 20px;" class="flex flex-col justify-center items-center">
+
+            <% if (item.photo) { %>
+              <img src="<%= item.photo %>" alt="<%= item.name %>" width="200" class="bg-[#F4F4F4] text-center" />
+              <% } else { %>
+                <p>No image available</p>
+                <% } %>
+                  <div class="info p-3 flex flex-col gap-2">
+                    <h2 style="font-weight: 500; height: 40px; width:100%; display: flex; flex-wrap: wrap;">
+                      <%= item.name %>
+                    </h2>
+                    <div class="pricing flex justify-between items-center font-bold gap-2">
+                      <p>₹<%= item.price %>
+                      </p>
+                      <span class="xl:px-2 border border-[#A5A5A5] text-[#A5A5A5] rounded-md text-sm w-[18vw] xl:w-auto text-center">10% OFF</span>
+                    </div>
+                    <div class="rating flex gap-6">
+                      <div class="star flex">
+                        <% if (item.rating===4.5) { %>
+                          <img src="/img/star.svg" alt="">
+                          <img src="/img/star.svg" alt="">
+                          <img src="/img/star.svg" alt="">
+                          <img src="/img/star.svg" alt="">
+                          <img src="/img/halfstar.svg" alt="">
+                          <% }else if(item.rating===2){ %>
+                            <img src="/img/star.svg" alt="">
+                            <img src="/img/star.svg" alt="">
+                            <% }else if(item.rating===4){ %>
+                              <img src="/img/star.svg" alt="">
+                              <img src="/img/star.svg" alt="">
+                              <img src="/img/star.svg" alt="">
+                              <img src="/img/star.svg" alt="">
+                              <% }else if(item.rating===5){ %>
+                              <img src="/img/star.svg" alt="">
+                              <img src="/img/star.svg" alt="">
+                              <img src="/img/star.svg" alt="">
+                              <img src="/img/star.svg" alt="">
+                              <img src="/img/star.svg" alt="">
+                              <% }else if(item.rating===3){ %>
+                              <img src="/img/star.svg" alt="">
+                              <img src="/img/star.svg" alt="">
+                              <img src="/img/star.svg" alt="">
+                              <% } %>
+
+                      </div>
+                      <p class="hidden xl:block">
+                        <%= item.rating %>
+                      </p>
+                     
+                    </div>
+                    
+                    <button  
+                    class="add-to-cart view_all_btn bg-[#E62F1D] py-2 px-1 xl:px-3 text-white rounded-lg cursor-pointer hover:bg-[#6BB252] flex xl:gap-2 justify-center"
+                       data-photo="<%= item.photo %>"
+                       data-name="<%= item.name %>"
+                       data-price="<%= item.price %>"
+                       data-rating="<%= item.rating %>" 
+                       data-quantity="<%= item.quantity %>" 
+
+                       >
+                        <img src="/img/cart2.svg" alt="" >
+                        Add to Cart
+                    </button>
+                    
+                    
+                  </div>
+          </div>
+        </li>
+        <% }) %>
+    </ul>

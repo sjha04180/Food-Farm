@@ -1,0 +1,4 @@
+# Ignore node modules and environment config
+node_modules/
+.env
+google.json

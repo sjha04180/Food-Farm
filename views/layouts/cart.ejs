@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Farm</title>
+
+  <link rel="stylesheet" href="/src/output.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&family=Rubik+Mono+One&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="imgfavicon//favicon.svg" />
+  <link rel="shortcut icon" href="img/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="img/favicon/site.webmanifest" />
+
+</head>
+
+<body class="overflow-x-hidden bg-[#eaeded]">
+  <div class="Box">
+    <%- include('../partials/cartNavbar.ejs'); %>
+      <main class="main ">
+        <%- body %>
+      </main>
+      <%- include('../partials/footer.ejs'); %>
+  </div>
+
+
+  <script src="/JS/script.js"></script>
+
+  <!-- For payment -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script>
+    document.getElementById("pay-button").addEventListener("click", async function (e) {
+      e.preventDefault();
+
+      const amount = this.dataset.amount;
+
+      // Create order from backend
+      const response = await fetch("/create-order", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ amount }) // send amount in rupees
+      });
+
+      const order = await response.json();
+
+      const options = {
+        key: order.razorpay_key, // Razorpay Key ID
+        amount: amount * 100, // in paise
+        currency: "INR",
+        name: "FoodFarm",
+        description: "Test Order",
+        order_id: order.id, // order_id from Razorpay
+        handler: function (response) {
+          alert("Payment Successful!");
+          // You can redirect or store details here
+          const total = document.getElementById("total");
+          total.innerHTML = "";
+          document.getElementById("total").classList.toggle('hidden');
+          localStorage.setItem("cart", JSON.stringify([]));
+          window.location.href = `/payment-success?payment_id=${response.razorpay_payment_id}`;
+        },
+        prefill: {
+          name: "Sachin",
+          email: "test@example.com",
+          contact: "9999999999",
+        },
+        theme: {
+          color: "#388E3C"
+        }
+      };
+
+      const rzp = new Razorpay(options);
+      rzp.open();
+
+      rzp.on("payment.failed", function (response) {
+        alert("Oops! Something went wrong. Payment Failed");
+        console.log(response.error);
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,182 @@
+<div class="container mt-0">
+    <div class="hero-section 
+        bg-cover w-screen h-auto xl:h-[65vh] relative text-white flex items-center justify-center">
+        <%- include('./partials/carousel.ejs') %>
+            <div class="content absolute mb-10 w-[45vw] h-auto xl:h-[40vh] flex flex-col items-center justify-center gap-0">
+                <span class="first w-full ml-16 hidden xl:block" style="font-family:sans-serif; font-size: var(--font-size-md);">Fuel
+                    Your Body, Feed Your Soul with Organic
+                    Goodness</span>
+                <div class="flex flex-col justify-center items-center relative hidden xl:flex"
+                    style="font-family: 'Rubik Mono One', monospace;  font-size: var(--font-size-2xl);">
+                    <div>ALWAYS</div>
+                    <div class="xl:absolute xl:top-[60%]">ORGANIC</div>
+                </div>
+                <div class="fourth mt-17 mb-3 xl:mb-0 ">
+                    <form action="/all" method="get" class="">
+                        <input type="submit" value="START SHOPPING"
+                            class="btn py-2 px-4 rounded-lg bg-[#6BB252] text-white font-bold cursor-pointer hover:bg-green-800"
+                            style="font:Inter,sans-serif; font-size: var(--font-size-md); ">
+                    </form>
+                </div>
+                <div class="slider_buttons flex gap-3 xl:absolute xl:-bottom-25">
+                    <img src="/img/disc.svg" class="slider_button cursor-pointer" alt="" data-src="/img/disc.svg">
+                    <img src="/img/circle.svg" class="slider_button cursor-pointer" alt="" data-src="/img/circle.svg">
+                    <img src="/img/circle.svg" class="slider_button cursor-pointer" alt="" data-src="/img/circle.svg">
+                </div>
+            </div>
+    </div>
+
+    <div class="section1_AllItems flex p-3 xl:p-10 w-[99vw]">
+        <div class="left_section w-[20%] pt-4 flex flex-col gap-5 hidden xl:flex ">
+            <div class="text-[#999999] text-sm">CATEGORIES</div>
+            <ul class="flex flex-col gap-5 mb-5">
+                <li
+                    class="pt-4 pb-2 pl-3  border border-dotted border-b-[#999999] border-x-white border-t-white hover:bg-[#999999] hover:text-white hover:rounded-lg">
+                    <a href="/category/fruits" class="flex gap-3 "><img src="/img/fruits.svg" alt="">Fruits And
+                        Vegetables</a></li>
+                <li
+                    class="pt-4 pb-2 pl-3 border border-dotted border-b-[#999999] border-x-white border-t-white hover:bg-[#999999] hover:text-white hover:rounded-lg ">
+                    <a href="/category/pets" class="flex gap-3"><img src="/img/pets.svg" alt="">Pet Foods</a></li>
+                <li
+                    class="pt-4 pb-2 pl-3 border border-dotted border-b-[#999999] border-x-white border-t-white hover:bg-[#999999] hover:text-white hover:rounded-lg">
+                    <a href="/category/dairy" class="flex gap-3"><img src="/img/dairy.svg" alt="">Dairy And Eggs</a>
+                </li>
+                <li
+                    class="pt-4 pb-2 pl-3 border border-dotted border-b-[#999999] border-x-white border-t-white hover:bg-[#999999] hover:text-white hover:rounded-lg">
+                    <a href="/category/bakery" class="flex gap-3"><img src="/img/bakery.svg" alt="">Bakery And Bread</a>
+                </li>
+                <li
+                    class="pt-4 pb-2 pl-3 border border-dotted border-b-[#999999] border-x-white border-t-white hover:bg-[#999999] hover:text-white hover:rounded-lg">
+                    <a href="/category/canned" class="flex gap-3"><img src="/img/canned.svg" alt="">Canned Goods</a>
+                </li>
+                <li
+                    class="pt-4 pb-2 pl-3 border border-dotted border-b-[#999999] border-x-white border-t-white hover:bg-[#999999] hover:text-white hover:rounded-lg">
+                    <a href="/category/snacks" class="flex gap-3"><img src="/img/snacks.svg" alt="">Snacks And Chips</a>
+                </li>
+                <li
+                    class="pt-4 pb-2 pl-3 border border-dotted border-b-[#999999] border-x-white border-t-white hover:bg-[#999999] hover:text-white hover:rounded-lg">
+                    <a href="/category/beverages" class="flex gap-3"><img src="/img/beverages.svg" alt="">Beverages</a>
+                </li>
+            </ul>
+            <div class="img">
+                <img src="/img/sale.png" alt="">
+            </div>
+        </div>
+        <div class="right_section w-[100%] xl:w-[80%] pt-3">
+            <div class="head flex justify-between items-center mb-4 px-6" style="font-family: 'Inter', sans-serif; ">
+                <h2 class="Items_heading" style="font-size: var(--font-size-md);">Freshly Arrived</h2>
+                <form action="/all" method="get">
+                    <input type="submit" value="View All"
+                        class="btn view_all_btn bg-[#6BB252] py-1 px-3 text-white rounded-lg cursor-pointer hover:bg-green-800">
+                </form>
+            </div>
+            <div class="body">
+                <%- include('./partials/items.ejs') %>
+            </div>
+            
+        </div>
+    </div>
+    <div class="section2 h-[180vh] xl:h-[60vh] w-screen flex justify-center items-start xl:items-center my-5 xl:my-0">
+        <div class="articles w-[100vw] xl:w-[70vw] h-[100vh] xl:h-[55vh] flex flex-col  items-center ">
+            <div class="articles_heading flex justify-between w-full px-4">
+                <h2 class="font-extrabold" style="font-size: var(--font-size-md);  font-family:Boldonse, system-ui;">Our Latest
+                    Articles</h2>
+                <form action="/all" method="get">
+                    <input type="submit" value="View All"
+                        class="btn view_all_btn bg-[#6BB252] py-1 px-3 text-white rounded-lg cursor-pointer hover:bg-green-800">
+                </form>
+            </div>
+            <div class="card">
+                <ul class="flex flex-col xl:flex-row xl:gap-5">
+                    <li class="shadow-lg p-4 rounded-lg flex flex-col justify-center items-center gap-2">
+                        <div class="img"><img src="/img/article1.png" alt="" class="rounded-t-lg"></div>
+                        <div class="content flex flex-col gap-3">
+                            <div class="flex gap-3">
+                                <p class="flex gap-1 text-[#828282]"><img src="/img/calender.svg" alt="">12th Jan 2025</p>
+                                <p class="flex gap-1 text-[#828282]"><img src="/img/folder.svg" alt="">health</p>
+                            </div>
+                            <p class="font-medium text-lg">Right way to preserve the fruits & other organics</p>
+                            <p><a href="" class="underline underline-offset-1 text-[#828282]">Read more</a></p>
+                        </div>
+                    </li>
+                    <li class="shadow-lg p-4 rounded-lg flex flex-col gap-2">
+                        <div class="img"><img src="/img/article2.png" alt="" class="rounded-t-lg"></div>
+                        <div class="content  flex flex-col gap-3">
+                            <div class="flex gap-3">
+                                <p class="flex gap-1 text-[#828282]"><img src="/img/calender.svg" alt="">12th Jan 2025</p>
+                                <p class="flex gap-1 text-[#828282]"><img src="/img/folder.svg" alt="">health</p>
+                            </div>
+                            <p class="font-medium text-lg">Right way to preserve the fruits & other organics</p>
+                            <p><a href="" class="underline underline-offset-1">Read more</a></p>
+                        </div>
+                    </li>
+                    <li class="shadow-lg p-4 rounded-lg flex flex-col gap-2">
+                        <div class="img"><img src="/img/article3.png" alt="" class="rounded-t-lg"></div>
+                        <div class="content  flex flex-col gap-3">
+                            <div class="flex gap-3">
+                                <p class="flex gap-1 text-[#828282]"><img src="/img/calender.svg" alt="">12th Jan 2025</p>
+                                <p class="flex gap-1 text-[#828282] hidden xl:block"><img src="/img/folder.svg" alt="">health</p>
+                            </div>
+                            <p class="font-medium text-lg">Right way to preserve the fruits & other organics</p>
+                            <p><a href="" class="underline underline-offset-1 text-[#828282]">Read more</a></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="section3 h-[60vh] xl:h-[60vh] w-screen flex justify-center items-center " style="background-image: url('/img/bg-signUp.png'); ">
+        <div class="signUp h-[100%] w-[100%] xl:w-[80%] flex">
+          <div class="left h-[100%] w-[100%] xl:w-[45%] xl:h-[100%]  flex justify-center items-center pr-4">
+            <div class="details w-[80%] h-[60%] flex flex-col gap-5 "  style="font-family: Poppins, sans-serif;" >
+                <p class="xl:font-bold" style="font-size: var(--font-size-lg);">Get <span class="text-amber-300 font-bold">20% Discount</span> On Your First Purchase</p>
+                <p>Just Sign Up & Register it now to become member.</p>
+                <div class="email flex flex-col gap-2">
+                    <form action="" method="get">
+                        <input type="email" name="" id="" placeholder="Email address" class="bg-white text-gray-600 w-full p-3 rounded-md">
+                    </form>
+                    <span class="w-full bg-black flex justify-center text-white p-3 rounded-md cursor-pointer">SUBSCRIBE NOW</span>
+                </div>
+            </div>
+          </div>
+          <div class="right w-[50%] h-[100%] hidden xl:block" ><img src="/img/signUp.png" alt="" class="object-cover"></div>
+        </div>
+    </div>
+    <div class="section4  h-[50vh] xl:h-[67vh] 2xl:h-[56vh] w-[100vw] flex justify-center items-center relative ">
+        <div class="img w-screen"><img src="/img/vegies.png" alt="" class="object-cover w-screen  h-[52vh] xl:h-[69vh] 2xl:h-[58vh]"></div>
+        <div class="features w-[100%] xl:w-[80%] h-[100%] xl:h-[80%] absolute">
+             <div class="options w-[100%] xl:w-[38%] h-[100%] pt-4  xl:pt-6 pl-2">
+                <ul class="flex flex-col gap-3 xl:gap-10">
+                    <li class="flex flex-row items-center gap-2 xl:gap-5 text-white border border-transparent  border-b-gray-600 pb-3">
+                        <img src="/img/truck.svg" alt="" class="w-10 h-10">
+                        <div class="flex flex-col xl:gap-2">
+                            <p class="font-bold  xl:text-lg">Free Delivery</p>
+                            <p>Only aplicable with T&C in some cities</p>
+                        </div>
+                    </li>
+                    <li class="flex flex-row items-center gap-2 xl:gap-5 text-white border border-transparent  border-b-gray-600 pb-3">
+                        <img src="/img/payment.svg" alt="" class="w-10 h-10">
+                        <div class="flex flex-col xl:gap-2">
+                            <p class="font-bold  xl:text-lg">Secure Payment</p>
+                            <p>100% secure payment with our payment partners</p>
+                        </div>
+                    </li>
+                    <li class="flex flex-row items-center gap-2 xl:gap-5 text-white border border-transparent  border-b-gray-600 pb-3">
+                        <img src="/img/globe.svg" alt="" class="w-10 h-10">
+                        <div class="flex flex-col xl:gap-2">
+                            <p class="font-bold  xl:text-lg">Quality Guarantee</p>
+                            <p>One the best quality foods in world</p>
+                        </div>
+                    </li>
+                    <li class="flex flex-row items-center gap-2 xl:gap-5 text-white ">
+                        <img src="/img/tag.svg" alt="" class="w-10 h-10">
+                        <div class="flex flex-col xl:gap-2">
+                            <p class="font-bold  xl:text-lg">Guaranteed Savings</p>
+                            <p>You can save more than 30%</p>
+                        </div>
+                    </li>
+                </ul>
+             </div>
+        </div>
+    </div>
+</div>

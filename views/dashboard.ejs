@@ -1,0 +1,23 @@
+
+
+<div class="min-h-[80vh] bg-white px-6 md:px-20 py-10">
+  <h1 class="text-3xl font-bold text-[#388E3C] mb-8">Welcome, <%= user.displayName %> 👋</h1>
+
+  <div class="flex flex-col md:flex-row items-start gap-10 bg-[#F1F8F4] p-6 rounded-2xl shadow-md">
+    
+    <!-- Profile Picture -->
+    <img  src="<%= user.photos[0].value %>" alt="Profile Photo"  class="w-28 h-28 rounded-full object-cover border-4 border-[#388E3C]"/>
+
+    <!-- User Info -->
+    <div class="flex-1">
+      <p class="text-lg"><span class="font-semibold text-[#388E3C]">Name:</span> <%= user.displayName %></p>
+      <p class="text-lg mt-2"><span class="font-semibold text-[#388E3C]">Email:</span> <%= user.emails[0].value %></p>
+
+      <a href="/auth/logout" class="inline-block mt-6 px-5 py-2 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-xl transition">
+        Logout
+      </a>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,73 @@
+<div class=" header font-[Inter,sans-serif] font-bold flex justify-center xl:flex-col px-2 pt-5 xl:px-5 xl:pt-5 mb-0">
+    <div class="frame1 flex flex-col xl:flex-row items-center justify-around gap-1 xl:gap-6 mb-2 xl:mb-7 relative">
+        <div class="img "><a href="/" class="cursor-pointer flex"><img src="/img/logo-icon.svg" alt=""><img src="/img/FoodFarm-logo.svg" alt="" class=""></a></div>
+        <form action="/all/search" method="GET" class="flex items-center justify-between  ">
+            <div
+                class=" searchBar ml-10 bg-[#F5F5F5] border border-y-[#D8D8D8] border-l-[#D8D8D8] border-r-[#D8D8D8] xl:border-r-0 py-2 px-5 rounded-lg xl:rounded-l-lg flex gap-3 ">
+                <select id="categories" name="categories" class="hidden xl:block">
+                    <option value="ALL CATEGORIES">ALL CATEGORIES</option>
+                    <option value="banana">fruits</option>
+                    <option value="mango">pets</option>
+                </select>
+                <input type="text" name="query" placeholder="Search for products..." class="search-input w-[100%] ">
+            </div>
+            <div class="bg-[#6BB252] py-2 px-6 rounded-r-lg border border-b-2 border-y-1 border-[#6BB252] text-white hidden xl:block">
+                <button type="submit" class="search-button">Search</button>
+            </div>
+        </form>
+        <div id="more_button" class=" z-99 absolute top-15 -right-15 sm:hidden"><img src="/img/more.svg" alt="" class="invert w-8 h-8"></div>
+        <div id="options" class="hidden flex flex-col xl:flex-row  items-center gap-4 xl:gap-10 absolute top-23 -right-16 z-99 p-2 bg-gray-300 xl:bg-white xl:static xl:flex rounded-xl opacity-0.6">           
+            <form action="/auth/dashboard" method="get" >
+                <button class="cursor-pointer xl:p-2 rounded-full hover:bg-gray-400">
+                    <img src="/img/profile.svg" alt="">
+                </button>
+            </form>
+            <form action="" method="get">
+                <button class="cursor-pointer xl:p-2 rounded-full hover:bg-gray-400">
+                    <img src="/img/bookmark.svg" alt="">
+                </button>
+            </form>
+            <form action="/cart" method="get">
+                <button class="cursor-pointer xl:-2 rounded-full hover:bg-gray-400">
+                    <img src="/img/cart.svg" alt="">
+                </button>
+            </form>
+        </div>
+
+    </div>
+    <div class="frame2 flex items-start xl:items-center justify-center gap-4 relative ">
+        <div class="flex items-center justify-center hidden xl:block">
+            <span
+                class="py-2 px-8 border border-t-[#457235] border-r-[#457235] border-l-white border-b-[#6BB252] bg-[#6BB252] cursor-pointer hover:bg-[#6BB252]"><a
+                    href="/">HOME</a></span>
+            <span
+                class="py-2 px-8 border border-t-[#D8D8D8] border-r-[#D8D8D8] border-l-white border-b-[#D8D8D8] cursor-pointer hover:bg-[#6BB252]"><a
+                    href="/category/fruits">ORGANIC</a></span>
+            <span
+                class="py-2 px-8 border border-t-[#D8D8D8] border-r-[#D8D8D8] border-l-white border-b-[#D8D8D8] cursor-pointer hover:bg-[#6BB252]"><a
+                    href="/category/pets">Pets</a></span>
+            <span
+                class="py-2 px-8 border border-t-[#D8D8D8] border-r-[#D8D8D8] border-l-white border-b-[#D8D8D8] cursor-pointer hover:bg-[#6BB252]"><a
+                    href="/category/snacks">SNACKS</a></span>
+            <span
+                class="py-2 px-8 border border-t-[#D8D8D8] border-r-[#D8D8D8] border-l-white border-b-[#D8D8D8] cursor-pointer hover:bg-[#6BB252]"><a
+                    href="/category/beverages">BEVERAGES</a></span>
+            <span
+                class="py-2 px-8 border border-t-[#D8D8D8] border-r-[#D8D8D8] border-l-white border-b-[#D8D8D8] cursor-pointer hover:bg-[#6BB252]"><a
+                    href="/category/bakery">BAKERY</a></span>
+            <span
+                class="py-2 px-8 border border-t-[#D8D8D8] border-r-[#D8D8D8] border-l-white border-b-[#D8D8D8] cursor-pointer hover:bg-[#6BB252]"><a
+                    href="/category/canned">CANNED FOODS</a></span>
+            <span
+                class="py-2 px-8 border border-t-[#D8D8D8] border-r-[#D8D8D8] border-l-white border-b-[#D8D8D8] cursor-pointer hover:bg-[#6BB252]"><a
+                    href="/category/dairy">DAIRY</a></span>
+        </div>
+        <div class="login">
+            <form action="/login" method="get">
+                <button class="cursor-pointer py-2 px-4 bg-red-500 text-amber-50 rounded-lg hover:bg-red-700">
+                    Login
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
