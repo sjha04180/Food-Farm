@@ -51,7 +51,9 @@ Welcome to **FoodFarm**, a modern and responsive e-commerce grocery platform bui
 ![Desktop](./public/img/screenshots/desktop_view.png)
 
 ### 📱 Mobile View  
-![Mobile](./public/img/screenshots/mobile_view.jpg)
+### 📱 Mobile View  
+<img src="./public/img/screenshots/mobile_view.jpg" alt="Mobile View" width="250"/>
+
 
 ---
 
