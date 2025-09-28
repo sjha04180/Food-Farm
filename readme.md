@@ -2,6 +2,8 @@
 
 Welcome to **FoodFarm**, a modern and responsive e-commerce grocery platform built with 💚. This platform allows users to browse, search, filter, and purchase grocery items in a smooth and interactive way.
 
+Deployment: (https://food-farm.onrender.com)
+
 ![FoodFarm Banner](./public/img/logo.svg) <!-- optional preview image if you have -->
 
 ---
