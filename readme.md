@@ -1,6 +1,6 @@
 # 🛒 FoodFarm - E-Commerce Grocery Website
 
-Welcome to **FoodFarm**, a modern and responsive e-commerce grocery platform built with 💚 by Sachin. This platform allows users to browse, search, filter, and purchase grocery items in a smooth and interactive way.
+Welcome to **FoodFarm**, a modern and responsive e-commerce grocery platform built with 💚. This platform allows users to browse, search, filter, and purchase grocery items in a smooth and interactive way.
 
 ![FoodFarm Banner](./public/img/logo.svg) <!-- optional preview image if you have -->
 
